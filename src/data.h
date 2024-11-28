@@ -12,13 +12,8 @@
 
 
 //--------------------------------- Pin definition ---------------------------------
-/*#define        DUST_ILED_PIN                   26 
-#define        DUST_DATA_PIN                   25*/
 #define        DUST_ILED_PIN                   27 
 #define        DUST_DATA_PIN                   26
-
-/*#define        MQ131_D_PIN                     0
-#define        MQ131_A_PIN                     1*/
 
 #define        MQ7_A_PIN                       32
 #define        MQ7_D_PIN                       33
@@ -27,16 +22,7 @@
 #define        CJMCU_6814_NH3                  0
 #define        CJMCU_6814_NO2                  4
 
-/*#define        CJMCU_6814_CO                   5
-#define        CJMCU_6814_NH3                  18
-#define        CJMCU_6814_NO2                  19*/
-
 #define        FAN_PIN                         15 
-/*#define        BUTTON_PIN                      6
-
-#define        ledPin                          2*/
-
-
 
 
 const float MAX_VOLTS = 5.0;
@@ -192,7 +178,7 @@ float getTemperaturedata(){
 
 
 void fanManagement(float temperature){
-  if (temperature > 25 && temperature <= 30){
+  if (temperature > 26 && temperature <= 30){
     analogWrite(FAN_PIN, 85);
     fanState = 1;
   }
